@@ -1,5 +1,5 @@
 import React from "react";
-import { NativeBaseProvider } from "native-base";
+import { NativeBaseProvider, ScrollView } from "native-base";
 import theme from "../theme";
 import Footer from "./Footer";
 
@@ -8,10 +8,12 @@ type Props = {
 };
 const AppContainer = ({ children }: Props) => {
   return (
-    <NativeBaseProvider theme={theme}>
-      {children}
+    // <NativeBaseProvider theme={theme}>
+    <>
+      <ScrollView>{children}</ScrollView>
       <Footer />
-    </NativeBaseProvider>
+    </>
+    // </NativeBaseProvider>
   );
 };
 
